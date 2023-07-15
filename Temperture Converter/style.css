@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #353635;
+    background: url(tem.webp);
+    background-size: cover;
+    animation: backgroundAnimation 5s infinite;
+}
+
+/* ------------Heading CSS section---------------------------------------------- */
+
+.heading {
+    font-size: 2rem;
+}
+
+.heading h1 {
+
+    text-align: center;
+    font-family: 'Viga', sans-serif;
+    padding: 12px;
+    text-shadow: 4px 2px 4px red;
+    color: white;
+}
+
+/* ----------Container CSS Section------------------------------------------------ */
+
+.container {
+    max-width: 700px;
+    margin-left: 180px;
+    border-radius: 40px;
+    box-shadow: 0px 0px 25px 3px rgba(37, 218, 20, 0.8);
+    font-family: Arial;
+    padding: 20px;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: .5s;
+    background-color: #eaebd9;
+}
+
+.title {
+
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    gap: 10px;
+
+}
+
+::placeholder {
+    color: #000000;
+    opacity: 1;
+}
+
+.title h1 {
+    font-weight: bolder;
+    padding: auto;
+    color: rgb(56, 35, 149);
+    margin-left: 135px;
+}
+
+#celsius,
+#fahrenheit,
+#kelvin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.1);
+
+}
+
+input {
+    flex: 5;
+    height: 60px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: 10px 0 0 10px;
+    padding: 0 10px;
+    color: #010100;
+
+}
+
+.icon {
+    flex: 1;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 5px;
+    text-align: center;
+    font-size: 30px;
+    background: #27cf0a;
+    color: #fff;
+    border-radius: 0 8px 8px 0;
+}
+
+.button {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.button button {
+    outline: none;
+    padding: 10px 55px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 35px;
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: #fff;
+    color: #252527;
+}
+
+.button button:hover {
+    background: #22d60a;
+    color: rgb(2, 18, 5);
+    box-shadow: 0 0 5px rgb(24, 231, 48),
+        0 0 25px rgb(48, 235, 11), 0 0 50px rgb(102, 232, 22),
+        0 0 100px rgb(73, 221, 15), 0 0 200px rgb(33, 234, 22);
+}
+
+/* -----------Footer CSS Section---------------------------------------- */
+
+.footer {
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+}
+
+.footer {
+    color: #d7adad;
+}
+
+/* -------------Key Frames----------------------------------------------- */
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
