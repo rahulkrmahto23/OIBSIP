@@ -1,0 +1,387 @@
+ /* css reset */
+ * {
+     margin: 0px;
+     padding: 0px;
+ }
+
+ /* Smooth scrooling */
+ /* It means that When a user click to any link like home then they scrol to the home page */
+ html {
+     scroll-behavior: smooth;
+
+ }
+
+
+ /* navigation bar */
+ #navbar {
+     position: fixed;
+     top: 0;
+     left: 0;
+     height: 10px;
+     width: 100%;
+     padding: 20px 10%;
+     background: transparent;
+     background-color: rgb(40, 41, 43);
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     /* z-index: 100; */
+     padding: 20px;
+ }
+
+ /* navbar logo */
+ #logo {
+     position: relative;
+     font-size: 35px;
+     color: white;
+     text-decoration: none;
+     font-weight: 600;
+     cursor: default;
+
+ }
+
+ /* navbar list styling */
+ #navbar ul {
+     display: flex;
+     list-style: none;
+
+
+ }
+
+ #navbar ul li {
+
+     font-family: 'Viga', sans-serif;
+     font-size: 1.3rem;
+
+ }
+
+ #navbar ul li a {
+     text-decoration: none;
+     padding: 13px 33px;
+     color: white;
+     border-radius: 25px;
+
+
+
+ }
+
+ #navbar ul li a:hover {
+
+     color: black;
+     background-color: white;
+     box-shadow: 4px 3px 5px black;
+ }
+
+
+ #home {
+
+     display: flex;
+     flex-direction: column;
+     /* border: 3px solid red; */
+     height: 100vh;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+     width: 100vw;
+     background-image: url(bck1.jpeg);
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: 100%;
+     animation-name: bckground;
+     animation-duration: 12s;
+     animation-timing-function: linear;
+     animation-iteration-count: infinite;
+ }
+
+ @keyframes bckground {
+     0% {
+         background-color:url(bck1.jpeg);
+     }
+
+     35% {
+         background-image: url("bck2.jpeg");
+     }
+
+     70% {
+         background-image: url("bck3.jpeg");
+     }
+
+     100% {
+         background-image: url("bck4.jpeg");
+     }
+ }
+
+
+ #home::before {
+     /* content: ""; */
+     position: absolute;
+     top: 0px;
+     background: url('newWallpaper.jpg') no-repeat center center/cover;
+     height: 86%;
+     width: 100%;
+     /* z-index: -1;
+     opacity: .9; */
+ }
+
+ /* Utility class */
+ .h_primary {
+     text-align: center;
+     font-family: 'Viga', sans-serif;
+     font-size: 4.5rem;
+     padding: 12px;
+     text-shadow: 4px 2px 4px red;
+     color: rgb(0, 0, 0);
+ }
+
+ #home p {
+     font-family: 'Viga', sans-serif;
+     font-size: 1.15rem;
+     width: 100%;
+     text-align: center;
+     margin: 8px;
+     color: rgb(129, 51, 51);
+ }
+
+ .home .btn {
+     padding: 9px 43px;
+    margin-top: 100px;
+     height: 65px;
+     width: 220px;
+     font-size: 1.5rem;
+     background-color: rgb(204, 5, 5);
+     border-radius: 25px;
+     color: white;
+     border: 3px solid white;
+     cursor: pointer;
+     transition: all .1s ease-in-out;
+
+
+ }
+
+ .btn:hover {
+     background-color: rgb(13, 221, 79);
+     transform: scale(1.2);
+ }
+
+ /* .background{
+    height: 500px;
+    width: 100%;
+} */
+
+ .services {
+     /* background-color: rgb(194, 193, 201); */
+     height: 80vh;
+     padding: 80px;
+     background-color: #969090;
+ }
+
+ .services-section {
+     transition: all .1s ease-in-out;
+ }
+
+ .services-section:hover {
+     transform: scale(1.05);
+
+ }
+
+ .ser-btn {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-decoration: none;
+ }
+
+ .ser-btn a {
+     display: inline-flex;
+     justify-content: center;
+     align-items: center;
+     width: 150px;
+     height: 40px;
+     background: rgb(19, 174, 188);
+     color: #ededed;
+     font-size: 1rem;
+     letter-spacing: 1px;
+     font-weight: 600;
+     transition: .6s;
+     box-shadow: rgb(79, 70, 176);
+     border: 2px solid rgb(11, 215, 83);
+     border-radius: 15px;
+ }
+
+ .ser-btn a:hover {
+     background: #22d60a;
+     color: rgb(2, 18, 5);
+     box-shadow: 0 0 5px rgb(24, 231, 48),
+         0 0 25px rgb(48, 235, 11), 0 0 50px rgb(102, 232, 22),
+         0 0 100px rgb(73, 221, 15), 0 0 200px rgb(33, 234, 22);
+ }
+
+ .main-text {
+     width: 100%;
+     text-align: center;
+     margin-bottom: 2rem;
+     color: #ededed;
+ }
+
+ .main-text h2 {
+     font-weight: 700;
+     font-size: 45px;
+     color: #0ef;
+ }
+
+ .main-text span {
+     color: #ededed;
+     font-size: .8rem;
+     font-weight: 200;
+     letter-spacing: 2px;
+     text-transform: uppercase;
+ }
+
+ .services-section {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-wrap: wrap;
+     grid-gap: 2rem;
+ }
+
+ .services-section .service-box {
+     flex: 1 1 18rem;
+     padding: 2rem 1rem 2rem;
+     text-align: center;
+     background-color: #7777a9;
+     transition: transform .4s;
+     border-radius: 10px;
+     cursor: pointer;
+     /* opacity: 0;
+    animation: slideDown .5s ease forwards; */
+ }
+
+ .services-section h3 {
+     color: rgb(0, 0, 0);
+     font-size: 1.5rem;
+     padding-bottom: 20px;
+ }
+
+ .services-section p {
+     margin-top: 10px;
+     color: #e2efe1;
+     font-size: 1rem;
+     font-weight: 300;
+     letter-spacing: 1px;
+     padding-bottom: 15px;
+     line-height: 1.6;
+ }
+
+ .service-box:hover {
+     transform: translate(-.7rem);
+ }
+
+ .services-section .service-box {
+     border: 3px solid #b73333;
+     height: 300px;
+     /* width: 440px; */
+     text-align: center;
+     margin: 101px 12px;
+     padding: 21px;
+     border-radius: 68px;
+     background-color: #aababb;
+     cursor: pointer;
+     font-family: 'Viga', sans-serif;
+     transition: all .1s ease-in-out;
+
+ }
+
+ .service-box:hover {
+     transform: scale(1.05);
+
+ }
+
+ .service-box img {
+     display: block;
+     margin: auto;
+     height: 140px;
+ }
+
+ .service-box .secondary_heading {
+     margin: 33px 33px 16px 22px;
+     font-size: 2rem;
+ }
+
+
+ /* Clint Section */
+ #clint {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .clint_item img {
+     height: 123px;
+     margin: 27px;
+ }
+
+ .h1_primary {
+     text-align: center;
+     font-family: 'Viga', sans-serif;
+     font-size: 2rem;
+     padding: 12px;
+     text-shadow: 4px 2px 4px #607D8B;
+     color: black;
+ }
+
+ /* Background of the clint section */
+ #clint_section {
+     background: url("clint_background.jpg");
+     height: 50vh;
+     width: 100%;
+
+ }
+
+ #contact {
+     /* position: relative; */
+     height: 90vh;
+     margin-left: 25px;
+     margin-top: 10px;
+     background-color: #ededed;
+ }
+ .contact_box {
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-family: 'Viga', sans-serif;
+    /* padding: 10px; */
+}
+
+.contact_box input,
+.contact_box textarea {
+    width: 50%;
+    padding: .4rem;
+    font-size: .9rem;
+    border-radius: 7px;
+    
+}
+.formgroup{
+margin: 30px;
+}
+#message{
+    height: 200px;
+}
+
+#contact_box form
+{
+    width: 40%;
+}
+#submit{
+    height: 30px;
+    width: 90px;
+  justify-content: center;
+  margin-left: 40px;
+}
+.footer {
+    text-decoration: none;
+    text-align: center;
+    color: #0a0101;
+    height: 50px;
+    margin-top: 30px;
+}
